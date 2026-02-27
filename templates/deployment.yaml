@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.app.name }}
   labels:
-    {{- include "theciftlik-dev.labels" . | nindent 4 }}
+    {{- include "erens-generic-chart.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.deployment.replicaCount }}
@@ -25,7 +25,7 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "theciftlik-dev.serviceAccountName" . }}
+      serviceAccountName: {{ include "erens-generic-chart.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

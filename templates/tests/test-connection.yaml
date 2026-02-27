@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: "{{ .Values.app.name }}-test-connection"
   labels:
-    {{- include "theciftlik-dev.labels" . | nindent 4 }}
+    {{- include "erens-generic-chart.labels" . | nindent 4 }}
   annotations:
     "helm.sh/hook": test
 spec:

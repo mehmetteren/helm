@@ -4,7 +4,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: {{ .Values.app.name }}-pvc
   labels:
-    {{- include "theciftlik-dev.labels" . | nindent 4 }}
+    {{- include "erens-generic-chart.labels" . | nindent 4 }}
 spec:
   accessModes:
     - {{ .Values.persistence.accessMode }}
