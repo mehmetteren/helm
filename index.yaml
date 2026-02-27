@@ -3,12 +3,12 @@ entries:
   erens-generic-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-02-28T00:27:52.266262+03:00"
+    created: "2026-02-28T00:30:24.916399+03:00"
     description: A Helm chart for Kubernetes
-    digest: c368318fce63f8f7d8bac5e2fd44d60d88cbe77057a7770ca53e270ee4582527
+    digest: 3bbcade9411b2f25756989dd3c462ed562d10d2786f22b9e938e54f195317b62
     name: erens-generic-chart
     type: application
     urls:
     - https://mehmetteren.github.io/helm/erens-generic-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-28T00:27:52.265713+03:00"
+generated: "2026-02-28T00:30:24.915939+03:00"

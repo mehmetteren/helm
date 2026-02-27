@@ -13,7 +13,7 @@ spec:
   ingressClassName: {{ .Values.ingress.className }}
   tls:
     - hosts:
-      - "{{ .Values.ingress.hostPrefix }}.{{ .Values.domain }}"
+      - "{{ .Values.ingress.hostPrefix }}.{{ .Values.global.domain }}"
       secretName: {{ .Values.ingress.tlsSecret }}
   rules:
   - http:
@@ -25,7 +25,7 @@ spec:
             name: {{ .Values.app.name }}
             port:
               number: {{ .Values.service.port }}
-    host: "{{ .Values.ingress.hostPrefix }}.{{ .Values.domain }}"
+    host: "{{ .Values.ingress.hostPrefix }}.{{ .Values.global.domain }}"
 
 ---
 # http ingress for http->https redirection
@@ -48,7 +48,7 @@ spec:
             name: {{ .Values.app.name }}
             port:
               number: {{ .Values.service.port }}
-    host: "{{ .Values.ingress.hostPrefix }}.{{ .Values.domain }}"
+    host: "{{ .Values.ingress.hostPrefix }}.{{ .Values.global.domain }}"
 
 
 {{- end }}
